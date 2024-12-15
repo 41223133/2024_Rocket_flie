@@ -2,7 +2,7 @@
         <head>
         <title>cp_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -141,11 +141,93 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='工程數學結合火箭關係.html'>Next</a> >> 工程數學結合火箭關係<br /><h1>Open Rocket</h1>
-<p><span style="background-color: #ffff00;">這個影片是我第一次使用Open Rocket軟體的影片:</span></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Dej7ZCu4gXU?si=OCHgJoZ5zediBLOD" title="YouTube video player" width="560"></iframe></p>
+    <div id="tipue_search_content">工程數學為什麼需要用到虛數 << <a href='工程數學為什麼需要用到虛數.html'>Previous</a> <br /><h1>視覺化分析</h1>
+<p>我請ChatGPT利用python程式使用數學、圖形分析的方式來告訴我如果在火箭設計上是不是也可以使用工程數學的方式來設計出火箭。此概念也可以用在火箭設計系統分析穩定，並使用圖形的方式來了解系統模擬是否穩定。</p>
 <p></p>
-<br />About << <a href='About.html'>Previous</a> <a href='工程數學結合火箭關係.html'>Next</a> >> 工程數學結合火箭關係</div>
+<hr/>
+<p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import numpy as np
+import matplotlib.pyplot as plt
+
+# 定義時間範圍
+time = np.linspace(0, 5, 1000)
+
+# 定義時間域響應 f(t) = e^(-2t) * sin(3t)
+a = -2  # 衰減係數
+omega = 3  # 振盪頻率
+f_t = np.exp(a * time) * np.sin(omega * time)
+
+# 繪製時間域圖像
+plt.figure(figsize=(10, 6))
+plt.plot(time, f_t, label=r"$f(t) = e^{-2t}\sin(3t)$")
+plt.axhline(0, color='gray', linestyle='--', linewidth=0.8)
+plt.title("Time-Domain Response of the System", fontsize=14)
+plt.xlabel("Time (s)", fontsize=12)
+plt.ylabel("Amplitude", fontsize=12)
+plt.grid(alpha=0.3)
+plt.legend(fontsize=12)
+plt.show()
+
+# 繪製極點圖（複平面）
+plt.figure(figsize=(6, 6))
+plt.axhline(0, color='gray', linestyle='--', linewidth=0.8)
+plt.axvline(0, color='gray', linestyle='--', linewidth=0.8)
+plt.scatter([-2], [3], color='red', label="Pole: -2 + 3i", s=100)
+plt.scatter([-2], [-3], color='blue', label="Pole: -2 - 3i", s=100)
+plt.title("Pole-Zero Plot in the Complex Plane", fontsize=14)
+plt.xlabel("Re(s)", fontsize=12)
+plt.ylabel("Im(s)", fontsize=12)
+plt.grid(alpha=0.3)
+plt.legend(fontsize=12)
+plt.show()
+</pre>
+<p></p>
+<p></p>
+<p><img alt="" height="320" src="./../images/output.png" width="495"/></p>
+<p></p>
+<p><img alt="" height="512" src="./../images/output2.png" width="501"/></p>
+<p>以上是視覺化的結果：</p>
+<ol>
+<li>
+<p><strong>時間域響應圖：</strong></p>
+<ul>
+<li>你可以看到<span> </span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mn>2</mn><mi>t</mi></mrow></msup><mi>sin</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>3</mn><mi>t</mi><mo stretchy="false">)</mo></mrow></semantics></math></span></span>在時間上是一個振盪衰減的波形。</li>
+<li>隨著時間推進，振幅指數式減小，這表明系統是穩定的。</li>
+</ul>
+</li>
+<li>
+<p><strong>極點圖（複平面）：</strong></p>
+<ul>
+<li>極點位於<span> </span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>2</mn><mo>±</mo><mn>3</mn><mi>i</mi></mrow></semantics></math></span></span>，橫坐標（實部）為<span> </span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>2</mn></mrow></semantics></math></span></span>，表示衰減速度；縱坐標（虛部）為<span> </span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>±</mo><mn>3</mn></mrow></semantics></math></span></span>，表示振盪頻率。</li>
+<li>極點位於複平面的左半平面，這說明系統是穩定的（振幅逐漸減少）。</li>
+</ul>
+</li>
+</ol>
+<hr/>
+<pre><strong>火箭發射系統穩定性分析</strong></pre>
+<p>這些概念確實可以應用在火箭發射系統的穩定性分析中。例如：</p>
+<ol>
+<li>
+<p><strong>姿態控制系統（Attitude Control System）：</strong></p>
+<ul>
+<li>火箭在飛行過程中需要控制俯仰、偏航和滾轉角度，這些都是動態系統。</li>
+<li>透過分析系統的拉普拉斯極點，可以確定控制系統是否穩定，是否會發生無限振盪或震盪衰減。</li>
+</ul>
+</li>
+<li>
+<p><strong>推力控制（Thrust Control）：</strong></p>
+<ul>
+<li>當火箭的推力系統有延遲或振盪時，可以用類似的分析方法來優化控制器設計，使系統更穩定。</li>
+</ul>
+</li>
+<li>
+<p><strong>振動分析：</strong></p>
+<ul>
+<li>火箭結構在推力作用下會產生彈性振動，這些振動也可以用複數極點來描述和分析，確保振動不會導致結構失效。</li>
+</ul>
+</li>
+</ol>
+<p></p><br />工程數學為什麼需要用到虛數 << <a href='工程數學為什麼需要用到虛數.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
