@@ -552,3 +552,58 @@ plt.show()
 <p></p>
 <p><img alt="" height="422" src="/images/SpaceX_sea-level_Raptor_at_Hawthorne_-_2.jpg" width="237"/></p>
 <p>上面的圖就是火箭噴嘴(SpaceX Raptor <span>rocket engine</span>)</p>
+<p></p>
+<h2>火箭是怎麼噴射的</h2>
+<p>火箭要噴射得上去跟自己的自身重量與地心引力的對抗，就是由耳熟能詳的牛頓第三運動定律「作用與反作用力」來解釋的!</p>
+<p>我們常說，你往牆壁上打了一拳你的手會感覺到痛，是因為牆壁也給你了一拳讓你感受到力的反饋；你走路的時候，鞋子與地面磨擦使得你可以在路上行走，這就是「作用與反作用力」，也同樣是支持火箭升空一個重要的基礎。</p>
+<p></p>
+<p><img alt="" height="455" src="/images/20241221_153606.jpg" width="342"/></p>
+<p>這是我自己做的火箭自由體圖分析:</p>
+<ul>
+<li>Direction of flight 飛行方向</li>
+<li>CG(Center Gravity) 質心</li>
+<li>Drag 拉力</li>
+<li>Lift 升力</li>
+<li>Thrust 推力</li>
+</ul>
+<p>火箭要起飛時，如果不考慮空氣阻力或是摩擦力以及結構型態分析等等問題，那麼火箭的起飛條件就是由以上的自由體圖分析做為依據。</p>
+<p>當火箭的推力大於自身的重量以及地心引力時，火箭就會起飛離開表面。</p>
+<p>推力可以用公式表示為：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mover accent="true"><mi>m</mi><mo>˙</mo></mover><mo>⋅</mo><msub><mi>v</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">F = \dot{m} \cdot v_e</annotation></semantics></math></span></span></span></p>
+<p>其中：</p>
+<ul>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>m</mi><mo>˙</mo></mover></mrow><annotation encoding="application/x-tex">\dot{m}</annotation></semantics></math><span aria-hidden="true" class="katex-html"><span class="base"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span><span class="accent-body"><span class="mord">˙</span></span></span></span></span></span></span></span></span>：氣體質量流量（燃燒後的排氣速率）</li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">v_e</annotation></semantics></math><span aria-hidden="true" class="katex-html"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span></span></span></span>：排氣速度</li>
+</ul>
+<p></p>
+<p><span class="katex-display"><span class="katex">重量</span></span>指火箭及其燃料的總重力，方向垂直向下，與地球的重力加速度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut"></span><span class="mord mathnormal">g</span></span></span></span> 有關。公式為：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>=</mo><mi>m</mi><mo>⋅</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">W = m \cdot g</annotation></semantics></math></span><br/></span></span></p>
+<p>其中：</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span></span>：火箭的總質量</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span></span>：地球的重力加速度（約 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9.8</mn><mtext> </mtext><msup><mtext>m/s</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">9.8 \, \text{m/s}^2</annotation></semantics></math></span></span>）</li>
+</ul>
+<p></p>
+<p>大氣對火箭的阻力，方向與火箭運動方向相反。可以用空氣阻力公式來描述：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⋅</mo><mi>ρ</mi><mo>⋅</mo><msup><mi>v</mi><mn>2</mn></msup><mo>⋅</mo><msub><mi>C</mi><mi>d</mi></msub><mo>⋅</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">D = \frac{1}{2} \cdot \rho \cdot v^2 \cdot C_d \cdot A</annotation></semantics></math></span><br/></span></span></p>
+<p>其中：</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span></span>：空氣密度</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span></span>：火箭的速度</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>d</mi></msub></mrow><annotation encoding="application/x-tex">C_d</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="mord"><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span></span></span></span></span>：阻力係數</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span></span>：火箭迎風面的面積</li>
+</ul>
+<p></p>
+<pre><span style="background-color: #00ff00;"><strong>火箭的總合力分析：</strong></span></pre>
+<p>火箭的總合力可以用下列公式表示：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mtext>net</mtext></msub><mo>=</mo><mi>T</mi><mo>−</mo><mi>W</mi><mo>−</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">F_{\text{net}} = T - W - D</annotation></semantics></math></span><br/></span></span></p>
+<p>其中：</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span></span>：推力</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span></span>：重量</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span></span>：阻力</li>
+</ul>
+<p>當火箭的推力 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span></span> 大於 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>+</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">W + D</annotation></semantics></math></span></span>時，火箭會加速上升。</p>
+<hr/>
+<p>以上就是火箭力學的基本分析，也就是為什麼我們要學會靜力學、動力學的基本能力，未來還需要學到流體力學、熱力學以及材料力學更多知識。</p>
+<p>                                                   編輯時間:2024/12/21 3:53:53 PM</p>
